@@ -1,8 +1,9 @@
 # AgroTrust 🌾
 
-AgroTrust is a Soroban-powered **Smart Escrow** application built on Stellar. It secures agricultural trade between Farmers (Sellers) and Buyers (Agro-enterprises) by ensuring funds are only released once delivery is confirmed, or refunded if terms aren't met.
+AgroTrust is a mobile-first, Soroban-powered Smart Escrow dApp built on the Stellar network. Specifically designed for accessibility in the field, it secures agricultural trade between Filipino Farmers (Sellers) and Buyers (Agro-enterprises) by ensuring funds are only released once delivery is confirmed, or refunded if terms aren’t met.
 
-Instead of relying on fragile "trust-based" manual payments or opaque bank transfers, AgroTrust records the escrow state, fund locking, and fulfillment triggers on-chain for 100% transparency.
+Instead of relying on fragile "trust-based" manual payments or opaque bank transfers, AgroTrust provides a portable, transparent solution that records escrow states, fund locking, and fulfillment triggers on-chain. This allows farmers to verify proof-of-funds directly from their mobile devices before ever releasing their harvest, ensuring 100% financial transparency even in remote regions.
+
 
 ---
 
