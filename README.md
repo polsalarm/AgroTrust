@@ -11,10 +11,10 @@ Instead of relying on fragile "trust-based" manual payments or opaque bank trans
 ### Dashboard Overview
 ![AgroTrust Dashboard](frontend/images/agrotrust_dashboard.png)
 
-### Initiate Contract
-![Initiate Contract](frontend/images/initiate_contract.png)
+### ✍️ Complete Registration
+![Registration UI](frontend/images/Registration.png)
 
-### Settlement Dashboard
+### 📊 Settlement Dashboard
 ![Settlement Dashboard](frontend/images/settlement_dashboard.png)
 
 ### Success Confirmation
@@ -313,6 +313,7 @@ Returns the current state of the escrow (Funded, Completed, or Refunded).
 - ✅ Manual Terminal Initialization (Testnet)
 - ✅ Integrated Freighter Wallet Signing
 - ✅ Pixel-perfect Agricultural Dashboard
+- ✅ Smart Account Auto-Registration
 - ✅ Real-time Balance & State Tracking
 - ✅ Testnet-oriented configuration
 - ✅ Rust tests for core contract rules

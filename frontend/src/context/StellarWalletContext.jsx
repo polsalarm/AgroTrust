@@ -12,7 +12,7 @@ export const WalletProvider = ({ children }) => {
     
     // Global User state
     const [balance, setBalance] = useState("0.00");
-    const [profile, setProfile] = useState(null);
+    const [profile, setProfile] = useState(undefined); // undefined = loading, null = missing
 
     // Initial load connection check
     useEffect(() => {
