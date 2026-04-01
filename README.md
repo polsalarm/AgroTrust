@@ -1,9 +1,8 @@
 # AgroTrust 🌾
 
-AgroTrust is a mobile-first, Soroban-powered Smart Escrow dApp built on the Stellar network. Specifically designed for accessibility in the field, it secures agricultural trade between Filipino Farmers (Sellers) and Buyers (Agro-enterprises) by ensuring funds are only released once delivery is confirmed, or refunded if terms aren’t met.
+AgroTrust is an **AI-powered**, mobile-first, Soroban-powered Smart Escrow dApp built on the Stellar network. Specifically designed for accessibility in the field, it secures agricultural trade between Filipino Farmers (Sellers) and Buyers (Agro-enterprises) by ensuring funds are only released once delivery is confirmed, or refunded if terms aren’t met.
 
 Instead of relying on fragile "trust-based" manual payments or opaque bank transfers, AgroTrust provides a portable, transparent solution that records escrow states, fund locking, and fulfillment triggers on-chain. This allows farmers to verify proof-of-funds directly from their mobile devices before ever releasing their harvest, ensuring 100% financial transparency even in remote regions.
-
 
 ---
 
@@ -11,6 +10,12 @@ Instead of relying on fragile "trust-based" manual payments or opaque bank trans
 
 ### Dashboard Overview
 ![AgroTrust Dashboard](frontend/images/agrotrust_dashboard.png)
+
+### 🧠 Gemini AI Market Intelligence
+![Market Intelligence](frontend/images/MarketIntelligence.png)
+
+### ✍️ Initiate Contract
+![Initiate Contract](frontend/images/initiate_contract.png)
 
 ### ✍️ Complete Registration
 ![Registration UI](frontend/images/Registration.png)
@@ -54,6 +59,19 @@ Agricultural communities and trading partners often face high risks in payment s
 - **Trust Requirement**: All members have to trust that the totals and balances managed by a human organizer are correct.
 
 **AgroTrust** improves this by giving the trade relationship a smart-contract-backed source of truth on the Stellar network.
+
+---
+
+## 🧠 AI-Powered Market Intelligence
+
+AgroTrust integrates **Gemini 2.5 Flash** to provide farmers and buyers with real-time, context-aware agricultural strategy.
+
+- **Live Weather Integration**: The AI Advisor pulls real-time environmental data (Temperature, Wind, Conditions) from the **Open-Meteo API** to predict crop health and harvest timing.
+- **Dynamic Risk Assessment**: Gemini analyzes market velocity and local weather to recommend when to lock in escrow prices versus waiting for harvest peaks.
+- **Parametric Logic**: Provides pseudo-code parameters for smart contract execution based on live environmental triggers (e.g., automated insurance claims if a temperature threshold is hit).
+- **Digital Atheneum UI**: A clean, scholarly interface that delivers complex market data in a readable, professional "JSON-structured" format (no markdown artifacts).
+
+---
 
 ## ⚙️ How AgroTrust Works
 
@@ -229,9 +247,9 @@ Follow these steps to run AgroTrust on your machine.
 
 ### 1. Prerequisites
 - **Rust & Cargo** (`rustup`)
-- **Stellar CLI** (v22+)
-- **Node.js** (v18+)
-- **Freighter Extension** (Set to Testnet)
+-- **Stellar CLI** (v22+)
+-- **Node.js** (v18+)
+-- **Freighter Extension** (Set to Testnet)
 
 ### 2. Installation
 ```bash
@@ -291,26 +309,36 @@ Returns the current state of the escrow (Funded, Completed, or Refunded).
 
 ## 🏗️ Technology Stack
 - **Smart Contract**: Rust, Soroban SDK
+- **AI Advisor**: Gemini 2.5 Flash (Google Generative AI SDK)
+- **Environmental Data**: Open-Meteo API (Real-time weather)
 - **Frontend**: Vite, React, Tailwind CSS
 - **Blockchain**: Stellar Testnet, Freighter API
 - **Tooling**: Stellar CLI, Cargo
 
 ## 📂 Repo Structure
+
 ```text
 .
-├── src/                # Smart Contract Source (Rust)
-│   ├── lib.rs          # Escrow Logic
-│   └── test.rs         # Contract Unit Tests
-├── frontend/           # React Web Application
-│   ├── src/            # Components, Context, Services
-│   ├── images/         # UI Screenshots
-│   └── .env            # Environment Config
-├── Cargo.toml          # Rust Dependencies
-└── README.md           # Project Documentation
+├── src/                    # Soroban Smart Contract (Rust)
+│   ├── lib.rs              # Core Escrow logic and state machine
+│   └── test.rs             # 100% Rust unit test coverage
+├── frontend/               # AI-Powered React Application
+│   ├── src/                # Frontend Source
+│   │   ├── services/       # Gemini 2.5 Flash & Weather integration
+│   │   ├── pages/          # High-fidelity Dashboard & Market Insights
+│   │   ├── hooks/          # Custom Stellar/Wallet hooks
+│   │   └── context/        # Global state management
+│   ├── images/             # UI Screenshots (Intelligence, Settlement, etc.)
+│   └── .env                # (Ignored) Gemini & Stellar configuration
+├── target/                 # (Ignored) Compiled WASM artifacts
+├── Cargo.toml              # Rust contract dependencies
+└── README.md               # Project documentation
 ```
 
 ## 🎯 Current Status
 - ✅ Working Soroban Escrow Contract
+- ✅ **Live AI Intelligence Advisor (Gemini 2.5 Flash)**
+- ✅ **Real-time Weather Context Integration**
 - ✅ Manual Terminal Initialization (Testnet)
 - ✅ Integrated Freighter Wallet Signing
 - ✅ Pixel-perfect Agricultural Dashboard
