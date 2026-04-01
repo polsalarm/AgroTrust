@@ -75,7 +75,7 @@ AgroTrust integrates **Gemini 2.5 Flash** to provide farmers and buyers with rea
 
 ## ⚙️ How AgroTrust Works
 
-AgroTrust is built around 2 core concepts:
+AgroTrust is built around 3 core concepts:
 
 ### 1. Escrow Contracts
 Each escrow instance has:
@@ -89,7 +89,13 @@ Each trade follows a strict state-machine tracked on-chain:
 - **Completed**: Funds are released to the Farmer.
 - **Refunded**: Funds are returned to the Buyer.
 
-The wallet that initializes the contract defines these roles and the amount.
+各The wallet that initializes the contract defines these roles and the amount.
+
+### 3. AI Market Intelligence
+AgroTrust utilizes **Gemini 2.5 Flash** and real-time environmental data to provide:
+- **Predictive Analytics**: Forecasting price trends based on crop cycles and regional velocity.
+- **Climate Context**: Injecting live weather data from **Open-Meteo** to assess harvest risks.
+- **Strategic Advice**: Professional-grade guidance for farmers to optimize their lock-in timing.
 
 ## 🛡️ Core Rules Enforced By The Contract
 
@@ -116,10 +122,11 @@ This means AgroTrust supports multiple simultaneous trades across different farm
 
 ## 🏗️ Project Architecture
 
-This repository is a structured monorepo consisting of:
+This repository is a structured monorepo consisting of three primary layers:
 
-- **Soroban Smart Contract**: Located in [`src/lib.rs`](src/lib.rs). Written in Rust with `soroban-sdk`.
-- **Vite & React Frontend**: Located in [`frontend/`](frontend/). Integrates with the Stellar network.
+- **Soroban Smart Contract**: Located in [`src/lib.rs`](src/lib.rs). Written in Rust with `soroban-sdk`, it handles the core escrow state machine and fund security on the Stellar Testnet.
+- **AI Intelligence Layer**: Powered by **Gemini 2.5 Flash** and **Open-Meteo**, this layer provides real-time market strategy and environmental risk assessment, abstracting complex data into actionable UI insights.
+- **Vite & React Frontend**: Located in [`frontend/`](frontend/). A high-fidelity "Digital Atheneum" dashboard that integrates Stellar's `@stellar/stellar-sdk` and Freighter for seamless wallet interaction.
 
 ### Smart Contract
 The contract manages:
@@ -247,9 +254,9 @@ Follow these steps to run AgroTrust on your machine.
 
 ### 1. Prerequisites
 - **Rust & Cargo** (`rustup`)
--- **Stellar CLI** (v22+)
--- **Node.js** (v18+)
--- **Freighter Extension** (Set to Testnet)
+- **Stellar CLI** (v22+)
+- **Node.js** (v18+)
+- **Freighter Extension** (Set to Testnet)
 
 ### 2. Installation
 ```bash
