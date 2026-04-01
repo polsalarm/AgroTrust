@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard';
 import TransactionHistory from './pages/TransactionHistory';
 import UserProfile from './pages/UserProfile';
 import Registration from './pages/Registration';
+import MarketIntelligence from './pages/MarketIntelligence';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="register" element={<Registration />} />
           <Route path="contract" element={<InitiateContract />} />
           <Route path="settlement" element={<SettlementDashboard />} />
+          <Route path="insights" element={<MarketIntelligence />} />
           <Route path="history" element={<TransactionHistory />} />
           <Route path="profile" element={<UserProfile />} />
         </Route>
